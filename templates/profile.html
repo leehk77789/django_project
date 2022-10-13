@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <div>{{ user }}님의 페이지. 마지막 로그인 시간 : {{ user.last_login }}</div>
+
+    {% if user == request.user %}
+        <div>내 프로필 페이지</div>
+        <button>프로필 편집</button>
+    {% endif %}
+</body>
+</html>
